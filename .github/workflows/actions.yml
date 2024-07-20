@@ -7,7 +7,8 @@ on:
   workflow_dispatch:
   schedule:
     # - cron: '13,43 * * * *' # At 00:00 on Monday
-    - cron: '0 * * * *' # Trigger every hour at the start of the hour
+    # - cron: '0 * * * *' # Trigger every hour at the start of the hour
+    - cron: '0 */6 * * *' # Trigger every 6 hours at the start of the hour
 jobs:
   build:
     runs-on: ubuntu-latest
